@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body class="bg-primary">
+    <main class="container ">
+        
+    <section>
+        <div class="container  mt-4">
+            <h1  class="mt-3" >Add New product</h1>
+            <label for="productName">productName :</label>
+            <input oninput="regexName()" type="text" class="form-control mb-3" id="productName">
+            <p id="messageName" class="alert alert-danger d-none">plz enter first character capital like A-B-C</p>
+            
+    
+            <label for="productPrice">productPrice :</label>
+    <input type="number" class="form-control mb-3" id="productPrice" >
+    
+            <label for="productCategory">productCategory :</label>
+            <input type="text" class="form-control mb-3" id="productCategory">
+    
+    
+            <label for="productDisc">productDisc :</label>
+            <textarea class="form-control mb-3" id="productDisc" cols="15" rows="5"></textarea>
+    
+    
+            <div class="submit">
+        <button id="addBtn" onclick="addProduct()" class="btn btn-outline-primary btn-info">Add product</button>
+        <button id="updateBtn" onclick="updateProduct()" class="btn btn-outline-primary btn-info d-none">Update product</button>
+
+    </div>
+        </div>
+    
+    </section>
+    <section>
+        <input id="searchInput" oninput="searchProduct()" type="search" class=" m-auto form-control my-3 w-50 "  placeholder="Search by Name">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>index</th>
+                        <th>name</th>
+                        <th>price</th>
+                        <th>category</th>
+                        <th>disc</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+
+                </tbody>
+    
+            </table>
+    
+        </div>
+    </section>
+    
+    </main>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+<script src="Js/main.js"></script>
+</body>
+</html>
